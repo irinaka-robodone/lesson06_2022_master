@@ -4,9 +4,9 @@ import music
 current_pos = [0,0]
 
 while True:
-  current_pos = [0,0]       # スネークの頭の位置をリスト [x,y] で記憶する
+  current_pos = [0,0]           # スネークの頭の位置をリスト [x,y] で記憶する
   display.clear()
-  while current_pos != [4,4]:
+  while current_pos != [4,4]:   # スネークの最新の頭の位置が[4,4]になるまで以下の処理を繰り返す
     if button_a.was_pressed():
       current_pos[0] += 1
     if button_b.was_pressed():
@@ -19,5 +19,5 @@ while True:
       
     display.set_pixel(current_pos[0], current_pos[1], 9)  # スネークの新しい頭の位置[x,y]を描画する
     
-  music.play(music.POWER_UP)
+  music.play(music.POWER_UP)    # スネークの最新の頭の位置が [4,4] になった while ループを抜けて音を再生する
     
